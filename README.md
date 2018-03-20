@@ -1,9 +1,9 @@
 # **Grupa10-Logi~~crack~~**
 
 ## Članovi tima:
-*1. Fajić Amina*
-*2. Somun Kenan*
-*3. Šehić Mirza*
+*1. Fajić Amina - 
+2. Somun Kenan - 
+3. Šehić Mirza*
 
 ## Opis teme
 Dobro su nam poznate svakodnevne gužve na aerodromima pri rezervaciji i kupovini karata, naš sistem jednostavnim interfejsom rješava ove probleme za korisnika u samo nekoliko klikova.
@@ -39,9 +39,9 @@ Statistike po više osnova su također dostupne pri prijavi u sistem sa privileg
 - Mogućnost upravljanja zaposlenim osobljem od strane menadžera
 
 ## Akteri
-- Korisnik usluga - osoba koja ima mogućnost pregleda dostupnosti leta, te rezervacije leta (ukoliko je registrovani/prijavljeni korisnik)
-- Uposlenik - osoba koja odgovara na pozive za informacije, te naplaćuje direktna plaćanja 
-- Menadžer - ažurira ponudu letova, odobrava eventualne zahtjeve za otkazivanje leta od strane korisnika, nadgleda detaljnu statistiku glede kompanije, te upravlja zaposlenim osobljem
+- _Korisnik usluga_ - osoba koja ima mogućnost pregleda dostupnosti leta, te rezervacije leta (ukoliko je registrovani/prijavljeni korisnik)
+- _Uposlenik_ - osoba koja odgovara na pozive za informacije, te naplaćuje direktna plaćanja 
+- _Menadžer_ - ažurira ponudu letova, odobrava eventualne zahtjeve za otkazivanje leta od strane korisnika, nadgleda detaljnu statistiku glede kompanije, te upravlja zaposlenim osobljem
 
 
 
