@@ -1,13 +1,12 @@
 # **Grupa10-Logi~~crack~~**
-![Logicrack](logicrack.png)
+![Logicrack](logicrack_logo.png)
 
 ## Članovi tima:
 *1. Fajić Amina - 
 2. Somun Kenan - 
 3. Šehić Mirza*
 
-# GoFly
-## Letite samo kratkim tel. pozivom ili sa nekoliko klikova uz GoFly!
+# Tema: GoFly (Rezervacija leta je najlakša uz GoFly!)
 
 ## Opis teme
 Dobro su nam poznate svakodnevne gužve na aerodromima pri rezervaciji i kupovini karata, naš sistem jednostavnim interfejsom rješava ove probleme za korisnika u samo nekoliko klikova.
