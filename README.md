@@ -5,10 +5,15 @@
 2. Somun Kenan - 
 3. Šehić Mirza*
 
+<p align="center"> 
+# GoFly
+## Letite samo kratkim tel. pozivom ili sa nekoliko klikova uz GoFly!
+</p>
+
 ## Opis teme
 Dobro su nam poznate svakodnevne gužve na aerodromima pri rezervaciji i kupovini karata, naš sistem jednostavnim interfejsom rješava ove probleme za korisnika u samo nekoliko klikova.
 
-Rezervacija karata nikada nije bila lakša! Odaberite pojedinosti poput odredišta, datuma odlaska i dolaska, broja saputnika, te vrstu kabine i provjerite sve dostupne letove sa Vama najbližeg aerodroma.
+Rezervacija karata nikada nije bila lakša! Odaberite pojedinosti poput odredišta, datuma odlaska i dolaska, broja saputnika, te vrstu klase i provjerite sve dostupne letove sa Vama najbližeg aerodroma.
 
 _Pregled statusa letova uz pojedinosti poput distance, eventualnog presjedanja i planiranog vremena trajanja je također podržan jednostavnim unosom broja leta._ (Treba li nam i ova funkcionalnost?)
 
@@ -18,7 +23,7 @@ Marketing za saradnike kompanije na prvoj stranici naše aplikacije je obezbjeđ
 ### Registracija i prijava korisnika
 Prilikom pokretanja aplikacije, korisnik može odabrati pojedinosti željenog leta te potom izvršiti rezervaciju. Rezervacija je omogućena samo za registrovane korisnike koji tom prilikom unose lične podatke. Posjedovanjem profila korisnik može da se prijavljuje na sistem te ima mogućnosti: uvida u rezervisane letove, njihovo eventualno otkazivanje kao i ostavljanje dojma kompaniji nakon obavljenog leta.
 
-### Pregled dostupnih letova
+### Pretraga dostupnih letova
 Korisnici mogu provjeravati sve dostupne letove za željeni odabir pojedinosti, ali i provjeriti stanje leta (pomoću jedinstvenog broja leta). Rezervacija leta je omogućena samo za registrovane/prijavljene korisnike.
 
 ### Ažuriranje podataka o letovima
