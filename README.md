@@ -1,14 +1,13 @@
 # **Grupa10-Logi~~crack~~**
+![Logicrack](logicrack.png)
 
 ## Članovi tima:
 *1. Fajić Amina - 
 2. Somun Kenan - 
 3. Šehić Mirza*
 
-<p align="center"> 
 # GoFly
 ## Letite samo kratkim tel. pozivom ili sa nekoliko klikova uz GoFly!
-</p>
 
 ## Opis teme
 Dobro su nam poznate svakodnevne gužve na aerodromima pri rezervaciji i kupovini karata, naš sistem jednostavnim interfejsom rješava ove probleme za korisnika u samo nekoliko klikova.
@@ -47,16 +46,3 @@ Statistike po više osnova su također dostupne pri prijavi u sistem sa privileg
 - _Korisnik usluga_ - osoba koja ima mogućnost pregleda dostupnosti leta, te rezervacije leta (ukoliko je registrovani/prijavljeni korisnik)
 - _Uposlenik_ - osoba koja odgovara na pozive za informacije, te naplaćuje direktna plaćanja 
 - _Menadžer_ - ažurira ponudu letova, odobrava eventualne zahtjeve za otkazivanje leta od strane korisnika, nadgleda detaljnu statistiku glede kompanije, te upravlja zaposlenim osobljem
-
-
-
-
-
-
-
-
-
-
-
-
-
