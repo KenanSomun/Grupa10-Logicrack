@@ -2,14 +2,12 @@
 ![Logicrack](logicrack_logo.png)
 
 ## Članovi tima:
-*1. Fajić Amina - 
-2. Somun Kenan - 
-3. Šehić Mirza*
+*Somun Kenan - Šehić Mirza*
 
 # Tema: GoFly (Rezervacija leta je najlakša uz GoFly!)
 
 ## Opis teme
-Dobro su nam poznate svakodnevne gužve na aerodromima pri rezervaciji i kupovini karata, naš sistem jednostavnim interfejsom rješava ove probleme za korisnika u samo nekoliko klikova.
+Dobro su nam poznate svakodnevne gužve na aerodromima pri rezervaciji i kupovini karata. Naš sistem jednostavnim interfejsom rješava ove probleme za korisnika u samo nekoliko klikova.
 
 Rezervacija karata nikada nije bila lakša! Odaberite pojedinosti poput odredišta, datuma odlaska i dolaska, broja saputnika, te vrstu klase i provjerite sve dostupne letove sa Vama najbližeg aerodroma.
 
@@ -19,7 +17,7 @@ Marketing za saradnike kompanije na prvoj stranici naše aplikacije je obezbjeđ
 
 ## Procesi
 ### Registracija i prijava korisnika
-Prilikom pokretanja aplikacije, korisnik može odabrati pojedinosti željenog leta te potom izvršiti rezervaciju. Rezervacija je omogućena samo za registrovane korisnike koji tom prilikom unose lične podatke. Posjedovanjem profila korisnik može da se prijavljuje na sistem te ima mogućnosti: uvida u rezervisane letove, njihovo eventualno otkazivanje kao i ostavljanje dojma kompaniji nakon obavljenog leta.
+Prilikom pokretanja aplikacije, korisnik može odabrati pojedinosti željenog leta te potom izvršiti rezervaciju. Rezervacija je omogućena samo za registrovane korisnike koji tom prilikom unose lične podatke. Posjedovanjem profila korisnik može da se prijavljuje na sistem te ima mogućnosti: uvida u rezervisane letove, njihovo eventualno otkazivanje kao i uređivanje profila te ostavljanje dojma nakon obavljenog leta kroz jednostavan i pregledan korisnički interfejs.
 
 ### Pretraga dostupnih letova
 Korisnici mogu provjeravati sve dostupne letove za željeni odabir pojedinosti, ali i provjeriti stanje leta (pomoću jedinstvenog broja leta). Rezervacija leta je omogućena samo za registrovane/prijavljene korisnike.
@@ -27,21 +25,20 @@ Korisnici mogu provjeravati sve dostupne letove za željeni odabir pojedinosti, 
 ### Ažuriranje podataka o letovima
 Naše rješenje automatski ažurira podatke o letovima nakon unosa letova, rezervacija, odlaska aviona sa aerodroma, kao i prihvaćenih zahtjeva za otkazivanje leta.
 
-### Upravljanje avio-kompanijom (za vlasnika/menadžera)
-Ovaj proces nudi unos ponude letova, te sistem za odobravanje zahtjeva za otkazivanjem leta od strane korisnika. U slučaju vremenskih neprilika ili nekih drugih nepogoda, vlasnik također može jednostavnim klikom odgoditi let te automatski poslati obavještenje korisnicima.
+### Upravljanje avio-kompanijom (za menadžera/supervizora)
+Ovaj proces nudi unos ponude letova, te sistem za odobravanje zahtjeva za otkazivanjem leta od strane korisnika. U slučaju vremenskih neprilika ili nekih drugih nepogoda, vlasnik također može jednostavnim klikom odgoditi let _te automatski poslati obavještenje korisnicima._
 Statistike po više osnova su također dostupne pri prijavi u sistem sa privilegijom menadžera.
 
 ## Funkcionalnosti
 - Mogućnost prijave u sistem sa različitim privilegijama (menadžer, korisnik - gost, korisnik - prijavljeni/registrovani)
 - Mogućnost uređivanja ličnog profila 
-- Mogućnost provjere dostupnih letova, te provjere stanja leta na osnovu trenutne lokacije (GPS)
-- Mogućnost rezervacije i plaćanja leta (online), kao i uvida u sve rezervisane letove, ukupan broj letova i sl. (statistički)
-- Mogućnost ažuriranja podataka o letovima, te obavještenja korisnika o bitnim obavjestima poput odgode leta i sl. (Notifikacija/SMS)
 - Mogućnost ocjenjivanja kvalitete usluge ostavljanjem komentara, te 'like-ovanja' zvanične stranice na Facebook-u
-- Mogućnost poziva za provjeru dostupnosti i stanja leta 
-- Mogućnost upravljanja zaposlenim osobljem od strane menadžera
+- Mogućnost uvida u sve rezervisane letove uz opciju da se pošalje zahtjev za otkazivanjem leta
+- Mogućnost statističkih podataka o letovima korisnika
+- Mogućnost pretrage dostupnih letova za odabrane pojedinosti (gdje se pomoću GPS-a tj. trenutne lokacije nude letovi sa korisniku najbližih aerodroma iz okruženja)
+- Mogućnost rezervacije i plaćanja leta kreditnom karticom
+- Mogućnost ažuriranja podataka o letovima, te obavještenja korisnika o bitnim obavjestima poput odgode leta i slično pri prvoj sljedećoj prijavi na sistem
 
 ## Akteri
-- _Korisnik usluga_ - osoba koja ima mogućnost pregleda dostupnosti leta, te rezervacije leta (ukoliko je registrovani/prijavljeni korisnik)
-- _Uposlenik_ - osoba koja odgovara na pozive za informacije, te naplaćuje direktna plaćanja 
-- _Menadžer_ - ažurira ponudu letova, odobrava eventualne zahtjeve za otkazivanje leta od strane korisnika, nadgleda detaljnu statistiku glede kompanije, te upravlja zaposlenim osobljem
+- _Korisnik usluga_ - osoba koja ima mogućnost pretrage dostupnosti leta, te rezervacije leta (ukoliko je registrovani/prijavljeni korisnik)
+- _Menadžer_ - ažurira ponudu letova, odobrava eventualne zahtjeve za otkazivanje leta od strane korisnika, te nadgleda detaljnu statistiku glede kompanije
