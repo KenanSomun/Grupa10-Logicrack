@@ -12,7 +12,7 @@ Dobro su nam poznate svakodnevne gužve na aerodromima pri rezervaciji i kupovin
 Rezervacija karata nikada nije bila lakša! Odaberite pojedinosti poput odredišta, datuma odlaska i dolaska, broja saputnika, te vrstu klase i provjerite sve dostupne letove sa Vama najbližeg aerodroma.
 Ukoliko želite saznati detalje o nekom letu iste možete dobiti jednostavnim unosom broja leta u aplikaciji za što nije potrebna registracija.
  
-Menadžment letova, statistički podaci te odgovaranje na dobijene zahtjeve jednostavno je kroz interfejs za menadžera kompanije.
+Menadžment letova, statistički podaci te upravljanje zahtjevima jednostavno je kroz interfejs za admina (vlasnika) kompanije.
 
 ## Procesi
 ### Menadžment korisnika
@@ -28,22 +28,22 @@ Pri prvoj sljedećoj prijavi na sistem korisniku se ispisuju obavijesti vezane z
 Ovaj proces nudi unos ponude letova, te sistem za odobravanje zahtjeva za otkazivanjem leta od strane korisnika. U slučaju vremenskih neprilika ili nekih drugih nepogoda, vlasnik također može jednostavnim klikom odgoditi let, za što će korisnici biti obavješteni procesom 'Obavijesti o letovima'. 
 	
 ## Funkcionalnosti
-* Mogućnost prijave u sistem sa različitim privilegijama (menadžer, gost korisnik, registrovani korisnik)
+* Mogućnost prijave u sistem sa različitim privilegijama (administrator, gost korisnik, registrovani korisnik)
 * Funkcionalnosti za gost korisnike:
-	- Mogućnost pretrage dostupnih letova za odabrane zahtjeve (gdje se pomoću GPS-a tj. trenutne lokacije nude letovi sa korisniku najbližih aerodroma iz okruženja)
+	- Mogućnost pretrage dostupnih letova za odabrane zahtjeve
 	- Mogućnost provjere detalja leta pomoću broja leta
 * Funkcionalnosti za registrovane korisnike:
 	- Mogućnost rezervacije leta i plaćanja leta kreditnom karticom
 	- Mogućnost uređivanja ličnog profila 
-	- Mogućnost ocjenjivanja kvalitete usluge ostavljanjem komentara, te 'like-ovanja' zvanične stranice na Facebook-u
 	- Mogućnost uvida u sve rezervisane letove uz opciju da se pošalje zahtjev za otkazivanjem leta
-* Funkcionalnosti za menadžera (vlasnika) kompanije:
+	- Mogućnost ocjenjivanja kvalitete usluge ostavljanjem komentara, te praćenja oficijalne stranice kompanije na društvenim mrežama
+* Funkcionalnosti za administratora (vlasnika) kompanije:
 	- Mogućnost unosa ponude letova
 	- Mogućnost odgode letova uz obavještavanje putnika leta 
-	- Mogućnost odgovaranja na dobijene zahtjeve za otkazivanjem leta
+	- Mogućnost upravljanja zahtjevima (otkazivanje leta, korisničke privilegije)
 	- Mogućnost uvida u statističke podatke kompanije
 
 ## Akteri
 - _Gost korisnik_ - osoba koja ima mogućnost pretrage dostupnosti letova za odabrane zahtjeve, te provjere detalja nekog leta pomoću unosa jedinstvenog broja leta
 - _Registrovani korisnik_ - osoba koja ima mogućnost rezervacije leta, uređivanja profila, ostavljanja dojma o kvaliteti usluge, te slanje zahtjeva za otkazivanje leta 
-- _Menadžer_ - unosi ponudu letova, odobrava eventualne zahtjeve za otkazivanje leta od strane korisnika, te nadgleda detaljnu statistiku kompanije
+- _Administrator_ - unosi ponudu letova, upravlja dobijenim zahtjevima, te nadgleda detaljnu statistiku kompanije
