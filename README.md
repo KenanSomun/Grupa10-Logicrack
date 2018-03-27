@@ -16,16 +16,19 @@ Menadžment letova, statistički podaci te upravljanje zahtjevima jednostavno je
 
 ## Procesi
 ### Menadžment korisnika
-U aplikaciji postoje 3 različite privilegije pristupa sistemu. Gosti mogu provjeriti dostupnost leta za odabrane zahtjeve, kao i provjeriti detalje leta za neki let (pomoću jedinstvenog broja leta). Registrovanim korisnicima se omogućuje rezervisanje letova, uređivanje profila, slanje zahtjeva za eventualno otkazivanje leta te ostavljanje dojma nakon leta. Menadžer (vlasnik) posjeduje mogućnosti za unos ponude letova, odobravanje zahtjeva za otkazivanje leta, odgađanje letova kao i uvid u statistiku. 
+U aplikaciji postoje 3 različite privilegije pristupa sistemu. Gosti mogu provjeriti dostupnost leta za odabrane zahtjeve, kao i provjeriti detalje leta za neki let (pomoću jedinstvenog broja leta). Registrovanim korisnicima se omogućuje rezervisanje letova, uređivanje profila, slanje zahtjeva za eventualno otkazivanje leta te ostavljanje dojma nakon leta. Administrator (vlasnik) posjeduje mogućnosti za unos i odgodu letova, upravljanje pristiglim zahtjevima, te uvid u statistiku. 
 
 ### Rezervacija leta
-Rezervacija leta je omogućena samo registrovanim korisnicima što zahtjeva plaćanje rezervacije kreditnom karticom.
+Rezervacija leta je omogućena samo registrovanim korisnicima. Poslije pretrage i odabira odgovarajućeg leta korisnik vrši plaćanje rezervacije kreditnom karticom.
+
+### Otkazivanje leta 
+Registrovani korisnici nakon rezervisanja letova imaju uvid u sve rezervisane letove gdje u slučaju potrebe mogu administratoru (vlasniku) poslati zahtjev za otkazivanjem nekog leta. Nakon što vlasnik odobri ili odbije zahtjev, korisnici će biti obavješteni prvom sljedećom prijavom na sistem. 
 
 ### Obavijesti o letovima
 Pri prvoj sljedećoj prijavi na sistem korisniku se ispisuju obavijesti vezane za njegove rezervisane letove. 
 
 ### Menadžment letova
-Ovaj proces nudi unos ponude letova, te sistem za odobravanje zahtjeva za otkazivanjem leta od strane korisnika. U slučaju vremenskih neprilika ili nekih drugih nepogoda, vlasnik također može jednostavnim klikom odgoditi let, za što će korisnici biti obavješteni procesom 'Obavijesti o letovima'. 
+Ovaj proces nudi unos ponude letova, te sistem za odobravanje zahtjeva za otkazivanjem leta od strane korisnika. U slučaju vremenskih neprilika ili nekih drugih nepogoda, vlasnik također može jednostavnim klikom odgoditi let, za što će korisnici biti obavješteni prvom sljedećom prijavom na sistem. 
 	
 ## Funkcionalnosti
 * Mogućnost prijave u sistem sa različitim privilegijama (administrator, gost korisnik, registrovani korisnik)
