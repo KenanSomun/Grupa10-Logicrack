@@ -1,0 +1,139 @@
+﻿<Page
+    x:Class="uwpAdaptive.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:uwpAdaptive"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+        </Grid>
+
+        <Grid Grid.Row="1">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="1" Name="Ime" Text="Ime:" FontSize="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontStyle="Oblique"/>
+            <TextBlock Grid.Column="3" Name="Prezime" Text="Prezime:" FontSize="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontStyle="Oblique"/>
+        </Grid>
+
+        <Grid Grid.Row="2">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <TextBox Grid.Column="1" Name="tIme" Text="Mujo" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontStyle="Oblique" />
+            <TextBox Grid.Column="3" Name="tPrezime" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontStyle="Oblique" Text="Mujić"/>
+
+        </Grid>
+
+        <Grid Grid.Row="3" Margin="0,0,10,0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="1" Name="tŠifra1" Text="Unesite Šifru:" FontSize="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontStyle="Oblique"  />
+            <TextBlock Grid.Column="3" Name="tŠifra2" Text="Ponovo unesite šifru:" FontSize="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontStyle="Oblique"/>
+        </Grid>
+
+        <Grid Grid.Row="4">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <PasswordBox Grid.Column="1" Name="Šifra"  FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontStyle="Oblique" PasswordChar="*" IsPasswordRevealButtonEnabled="True" />
+            <PasswordBox Grid.Column="3" Name="Šifra2" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontStyle="Oblique" PasswordChar="*" IsPasswordRevealButtonEnabled="True" />
+
+        </Grid>
+
+        <Grid Grid.Row="5">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="1" Name="tE-mail" Text="E-mail:" FontSize="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontStyle="Oblique"/>
+            <TextBlock Grid.Column="3" Name="tMobitel" Text="Broj mobitela:" FontSize="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontStyle="Oblique"/>
+        </Grid>
+
+        <Grid Grid.Row="6">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <TextBox Grid.Column="1" Name="e-mail" Text="mail@etf.unsa.ba" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontStyle="Oblique" />
+            <TextBox Grid.Column="3" Name="mobitel" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontStyle="Oblique" Text="062/999-999"/>
+
+        </Grid>
+
+        <Grid Grid.Row="7">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+
+            <Button Grid.Column="1" Margin = "20" Content="Registruj se" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  ></Button>
+
+        </Grid>
+    </Grid>
+</Page>
