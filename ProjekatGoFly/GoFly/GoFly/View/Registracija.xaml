@@ -1,0 +1,132 @@
+﻿<Page
+    x:Class="GoFly.View.Registracija"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GoFly.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="375*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="1.3*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.5*"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Row="0" Grid.Column="1" Source="ms-appx:///Assets/Avion.png"  Stretch="Uniform"/>
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="0.3*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="1" Text="Ime: "  HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBlock Grid.Column="3" Text="Prezime: " HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        </Grid>
+
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="0.3*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox Grid.Column="1"  PlaceholderText="Mujo"  Name="imeTexBox" Text="{Binding Ime, Mode=TwoWay}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+            <TextBox Grid.Column="3"  PlaceholderText="Mujic"  Name="prezimeTexBox" Text="{Binding Prezime, Mode=TwoWay}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+
+
+        </Grid>
+
+        <Grid Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="0.3*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="1" Text="Unesite šifru: "  HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBlock Grid.Column="3" Text="Ponovo unesite šifru: "  HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        </Grid>
+
+        <Grid Grid.Row="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="0.3*"/>
+            </Grid.ColumnDefinitions>
+
+            <PasswordBox PasswordRevealMode="Hidden" Grid.Column="1" PlaceholderText="*****"  Name="sifraTexBox" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+            <PasswordBox PasswordRevealMode="Hidden" Grid.Column="3" PlaceholderText="*****"  Name="potvrdasifreTexBox" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+        </Grid>
+
+        <Grid Grid.Row="7">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="0.3*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="1" Text="E-mail: " HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBlock Grid.Column="3" Text="Broj mobitela: "  HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        </Grid>
+
+        <Grid Grid.Row="8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="0.3*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox Grid.Column="1" PlaceholderText="mail@etf.unsa.ba"  Name="emailTexBox" Text="{Binding Email, Mode=TwoWay}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+            <TextBox Grid.Column="3"  PlaceholderText="062/999-999"  Name="brojmobitelaTexBox" Text="{Binding PhoneNumber, Mode=TwoWay}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+        </Grid>
+
+        <Grid Grid.Row="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="1" Command="{Binding Register}" Content="Registruj se" Background="CornflowerBlue" Name="registrujButton" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        </Grid>
+
+    </Grid>
+</Page>

@@ -1,0 +1,109 @@
+﻿<Page
+    x:Class="GoFly.View.PovjeraDetaljaLeta"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GoFly.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.5*"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row= "1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="1" Command="{Binding PretragaDostupnihLetova}" BorderBrush="#FF856767" Content="Pretraga dostupnih letova"  Name="pretragaletovaButton" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Button Grid.Column="2" Command="{Binding ProvjeraDetaljaLeta}" BorderBrush="#FF856767" Content="Provjera detalja leta"  Name="provjeradetaljaletaButton" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Background="CornflowerBlue"/>
+            <Button Grid.Column="3" Command="{Binding Registrcija}" BorderBrush="#FF856767" Content="Registruj se/ Prijavi se"  Name="profilButton" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="0.3*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="1" Text="Unesite ID leta: " HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox Grid.Column="2" Name="IDletaTexBox" Text="{Binding IDleta, Mode=TwoWay}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+        </Grid>
+
+        <Grid Grid.Row="5" Background="LightGray">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="0.3*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="1" Text="Detalji o letu: " HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+
+        </Grid>
+
+        <Grid Grid.Row="6" Background="LightGray">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition Width="0.8*"/>
+                <ColumnDefinition Width="0.7*"/>
+                <ColumnDefinition Width="0.8*"/>
+                <ColumnDefinition Width="0.7*"/>
+                <ColumnDefinition Width="0.3*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="1" Text="Polazište:  " HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Grid.Column="2" Text="Grad" HorizontalAlignment="Left" VerticalAlignment="Center" Name="polazisteText" />
+            <TextBlock Grid.Column="3" Text="Dolazište:  " HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Grid.Column="4" Text="Grad " HorizontalAlignment="Left" VerticalAlignment="Center" Name="dolazisteText" />
+        </Grid>
+
+        <Grid Grid.Row="7" Background="LightGray">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition Width="0.8*"/>
+                <ColumnDefinition Width="0.7*"/>
+                <ColumnDefinition Width="0.8*"/>
+                <ColumnDefinition Width="0.7*"/>
+                <ColumnDefinition Width="0.3*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="1" Text="Datum polaska:  " HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Grid.Column="2" Text="dd/mm/yyyy" HorizontalAlignment="Left" VerticalAlignment="Center" Name="datumpolastaText" />
+            <TextBlock Grid.Column="3" Text="Datum dolaska:  " HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Grid.Column="4" Text="dd/mm/yyyy " HorizontalAlignment="Left" VerticalAlignment="Center" Name="datumdolaskaText" />
+        </Grid>
+
+    </Grid>
+</Page>
+
+    
+    
+    
+    
+    
+    
+    
+    
