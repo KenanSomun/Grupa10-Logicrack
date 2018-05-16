@@ -115,11 +115,17 @@
     <Compile Include="Model\Korisnik.cs" />
     <Compile Include="Model\Rezervacija.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\KontrolaKorisnikaViewModel.cs" />
     <Compile Include="ViewModel\OstavljanjeDojmaViewModel.cs" />
     <Compile Include="ViewModel\PrijavaViewModel.cs" />
     <Compile Include="ViewModel\ProvjeraDetaljaLetaViewModel.cs" />
     <Compile Include="ViewModel\RegistracijaViewModel.cs" />
+    <Compile Include="ViewModel\StatistickiPodaciViewModel.cs" />
+    <Compile Include="ViewModel\UnosLetovaViewModel.cs" />
     <Compile Include="ViewModel\UredjivanjeProfilaViewModel.cs" />
+    <Compile Include="View\KontrolaKorisnika.xaml.cs">
+      <DependentUpon>KontrolaKorisnika.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\OstavljanjeDojma.xaml.cs">
       <DependentUpon>OstavljanjeDojma.xaml</DependentUpon>
     </Compile>
@@ -132,8 +138,14 @@
     <Compile Include="View\Registracija.xaml.cs">
       <DependentUpon>Registracija.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\UredjivanjeProfila.xaml.cs">
-      <DependentUpon>UredjivanjeProfila.xaml</DependentUpon>
+    <Compile Include="View\StatistickiPodaci.xaml.cs">
+      <DependentUpon>StatistickiPodaci.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UnosLetova.xaml.cs">
+      <DependentUpon>UnosLetova.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UredivanjeProfila.xaml.cs">
+      <DependentUpon>UredivanjeProfila.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -169,6 +181,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="View\KontrolaKorisnika.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\OstavljanjeDojma.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -185,7 +201,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\UredjivanjeProfila.xaml">
+    <Page Include="View\StatistickiPodaci.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UnosLetova.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UredivanjeProfila.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

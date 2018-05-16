@@ -48,7 +48,7 @@
                 <ColumnDefinition Width="0.3*"/>
             </Grid.ColumnDefinitions>
 
-            <TextBlock Grid.Column="1" Text="Korisnicko ime: "  HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBlock Grid.Column="1" Text="Unesite E-mail: "  HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
             <TextBlock Grid.Column="3" Text="Šifra: " HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
         </Grid>
 
@@ -61,8 +61,8 @@
                 <ColumnDefinition Width="0.3*"/>
             </Grid.ColumnDefinitions>
 
-            <TextBox Grid.Column="1"  PlaceholderText="Mujo"  Name="usernameTexBox" Text="{Binding Username, Mode=TwoWay}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
-            <PasswordBox Grid.Column="3" PasswordRevealMode="Hidden" PlaceholderText="*******"  Name="passwordTexBox" Password="{Binding Password, Mode=TwoWay}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+            <TextBox Grid.Column="1"  PlaceholderText="mail@etf.unsa.ba"  Name="usernameTexBox" Text="{Binding Email, Mode=TwoWay}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+            <PasswordBox Grid.Column="3" PasswordRevealMode="Hidden" PlaceholderText="*******"  Name="passwordTexBox" Password="{Binding Sifra, Mode=TwoWay}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 
 
         </Grid>
@@ -76,7 +76,7 @@
                 <ColumnDefinition Width="0.3*"/>
             </Grid.ColumnDefinitions>
 
-            <HyperlinkButton Grid.Column="3" Content="Zaboravljena šifra" Name="passwordButton"  Foreground="Blue" VerticalAlignment="Top"/>
+            <HyperlinkButton Grid.Column="3" Command="{Binding ZaboravljenaSifra}" Content="Zaboravljena šifra" Name="passwordButton"  Foreground="Blue" VerticalAlignment="Top"/>
 
         </Grid>
 
@@ -87,7 +87,7 @@
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Column="1" Command="{Binding Login}" Content="Prijavi se" Background="CornflowerBlue" Name="loginButton" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Button Grid.Column="1" Command="{Binding PrijaviSe}" Content="Prijavi se" Background="CornflowerBlue" Name="loginButton" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 
         </Grid>
 
@@ -98,7 +98,7 @@
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Column="1" Command="{Binding Register}" Content="Registruj se" Background="CornflowerBlue" Name="registrationButton" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Button Grid.Column="1" Command="{Binding RegistrujSe}" Content="Registruj se" Background="CornflowerBlue" Name="registrationButton" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 
         </Grid>
 
@@ -109,7 +109,7 @@
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Column="1" Command="{Binding Guest}" Content="Nastavi kao gost" Background="CornflowerBlue" Name="guestButton" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Button Grid.Column="1" Command="{Binding NastaviKaoGost}" Content="Nastavi kao gost" Background="CornflowerBlue" Name="guestButton" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 
         </Grid>
     </Grid>

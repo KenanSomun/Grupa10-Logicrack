@@ -8,66 +8,126 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Windows.UI.Popups;
 
 namespace GoFly.ViewModel
 {
     public class PrijavaViewModel : INotifyPropertyChanged
     {
-        public ICommand Back { get; set; }
-        public ICommand Login { get; set; }
-        public ICommand Registracija { get; set; }
+        public ICommand PrijaviSe { get; set; }
+        public ICommand RegistrujSe { get; set; }
+        public ICommand ZaboravljenaSifra { get; set; }
+        public ICommand NastaviKaoGost { get; set; }
         INavigationService NavigationService { get; set; }
 
         private String username;
         private String password;
-        private String errorMessage;
 
-        public String Username { get { return username; } set { Set(ref username, value); } }
-        public String Password { get { return password; } set { Set(ref password, value); } }
-        public String ErrorMessage { get { return errorMessage; } set { Set(ref errorMessage, value); } }
+        public string Email
+        {
+            get
+            {
+                return username;
+            }
+            set
+            {
+                Set(ref username, value);
+            }
+        }
+
+        public string Sifra
+        {
+            get
+            {
+                return password;
+            }
+            set
+            {
+                Set(ref password, value);
+            }
+        }
 
         public PrijavaViewModel()
         {
             NavigationService = new NavigationService();
-            Back = new RelayCommand<object>(goBack);
-            Login = new RelayCommand<object>(loginButton_Click);
-            Registracija = new RelayCommand<object>(registracija);
+            PrijaviSe = new RelayCommand<object>(prijava);
+            RegistrujSe = new RelayCommand<object>(registracija);
+            NastaviKaoGost = new RelayCommand<object>(nastaviKaoGost);
+            ZaboravljenaSifra = new RelayCommand<object>(zaboravljenaSifra);
+        }
+
+        public async void zaboravljenaSifra(object parameter) {
+            MessageDialog msg = new MessageDialog("Nije implementirano jos", "Greska");
+            await msg.ShowAsync();
         }
 
         public void registracija(object parameter)
         {
-            NavigationService.Navigate(typeof(View.Registracija), new Gost());
+            NavigationService.Navigate(typeof(View.Registracija), null);
         }
 
-        public void goBack(object parameter)
+                            //Prijava korisnika
+        public async void prijava(object parameter)
         {
-            NavigationService.Navigate(typeof(View.Prijava), new Gost());
-        }
-
-        public void loginButton_Click(object parameter)
-        {
-            
             using (var db = new GoFlyDbContext())
             {
-                ErrorMessage = "";
-                if (Username == null || Password == null)
+                bool nema = true;
+                bool admin = false;
+
+                if (Email == null || Sifra == null)
                 {
-                    ErrorMessage = "Unesite podatke";
+                    MessageDialog msg = new MessageDialog("Unesite podatke", "Greska");
+                    await msg.ShowAsync();
                     return;
                 }
-                foreach (Korisnik k in db.Korisnici)
-                {
-                    if (k.Email == Username)
-                    {
-                        if (k.Sifra == (Validation.CreateMD5(Password)))
-                        {
-                            NavigationService.Navigate(typeof(View.Prijava), k);
-                        }
-                        break;
+
+                if (db.Administratori.Count() == 0) {
+                    Administrator temp = new Administrator();
+                    temp.AdministratorId = 1;
+                    temp.BrojTelefona = "";
+                    temp.Email = "Admin";
+                    temp.Ime = "Admin";
+                    temp.KorisnikId = 1;
+                    temp.MojeRezervacije = new List<Rezervacija>();
+                    temp.Prezime = "Admin";
+                    temp.Sifra = "admin1";
+
+                    db.Administratori.Add(temp);
+                }
+                
+                foreach (Administrator Admin in db.Administratori) {
+                    if (Admin.Email == Email && Admin.Sifra == Sifra) {
+                        admin = true;
+                        nema = false;
+                        NavigationService.Navigate(typeof(View.StatistickiPodaci), null);
                     }
                 }
-                ErrorMessage = "Pogresna sifra ili mail";
-            } 
+
+                if (!admin)
+                {
+                    foreach (Korisnik user in db.Korisnici)
+                    {
+                        if (user.Email == Email && user.Sifra == Sifra)
+                        {
+                            nema = false;
+                            NavigationService.Navigate(typeof(View.UredivanjeProfila), null);
+
+                            break;
+                        }
+                    }
+                }
+                                // Ako u bazi nema osobe sa unesenim podacima
+                if (nema) {
+                    MessageDialog msg = new MessageDialog("Neispravan E-mail ili sifra.");
+                    await msg.ShowAsync();
+                }
+            }
+        }
+
+        public async void nastaviKaoGost(object parameter)
+        {
+            MessageDialog msg = new MessageDialog("Nije implementirano za gost usera", "Greska");
+            await msg.ShowAsync();
         }
 
         protected virtual void OnPropertyChanged(String propertyName)

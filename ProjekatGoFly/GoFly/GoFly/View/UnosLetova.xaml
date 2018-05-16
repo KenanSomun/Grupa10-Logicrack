@@ -1,0 +1,162 @@
+﻿<Page
+    x:Class="GoFly.View.UnosLetova"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GoFly.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="1.3*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Row="0" Grid.Column="1" Source="ms-appx:///Assets/Avion.png"  Stretch="Uniform"/>
+
+            <Grid Grid.Column="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="1" Command="{Binding Back}" RelativePanel.AlignRightWithPanel="True" FontFamily="Segoe MDL2 Assets" Content="&#xE106;" Foreground="#FF004DBB" Background="LightGray" FontSize="20" BorderThickness="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <TextBlock Text="Admin panel" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Grid>
+
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="1" Name="StatistickiPodaciButton" Content="Statisticki podaci" Command="{Binding StatistickiPodaci}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Button Grid.Column="2" Name="KorisnickaKontrolaButton" Content="Kontrola korisnika" Command="{Binding KontrolaKorisnika}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+            <Button Grid.Column="3" Name="UnosLetovaButton" Content="Unos letova" Command="{Binding UnosLetova}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="CornflowerBlue" />
+        </Grid>
+
+        <Grid Grid.Row="6" Background="LightGray" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="1" Text="Polaziste: " HorizontalAlignment="Center"  VerticalAlignment="Center" />
+            <TextBlock Grid.Column="3" Text="Odrediste: " HorizontalAlignment="Center"  VerticalAlignment="Center" />
+
+            <TextBox Name="PolazisteText" Grid.Column="2" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Text="{Binding Polaziste, Mode=TwoWay}" />
+            <TextBox Name="OdredisteText" Grid.Column="4" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Text="{Binding Odrediste, Mode=TwoWay}" />
+
+        </Grid>
+
+        <Grid Grid.Row="7" Background="LightGray" ></Grid>
+        
+        <Grid Grid.Row="8" Background="LightGray" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="1" Text="Datum polaska: " HorizontalAlignment="Center"  VerticalAlignment="Center" />
+            <TextBlock Grid.Column="3" Text="Datum dolaska: " HorizontalAlignment="Center"  VerticalAlignment="Center" />
+
+            <TextBox Name="DatumPolaska" Grid.Column="2" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Text="{Binding DatumPolaska, Mode=TwoWay}" />
+            <TextBox Name="DatumDolaska" Grid.Column="4" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Text="{Binding DatumDolaska, Mode=TwoWay}" />
+
+        </Grid>
+
+        <Grid Grid.Row="9" Background="LightGray"></Grid>
+
+        <Grid Grid.Row="10" Background="LightGray" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+            
+
+        <TextBlock Grid.Column="1" Text="Max broj putnika: " HorizontalAlignment="Center"  VerticalAlignment="Center" />
+        <TextBlock Grid.Column="3" Text="Klasa leta: " HorizontalAlignment="Center"  VerticalAlignment="Center" />
+
+        <TextBox Grid.Column="2" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Text="{Binding MaxBrojPutnika, Mode=TwoWay}" />
+
+            <ComboBox Grid.Column="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ItemsPanel="{Binding KlasaLeta}" >
+                <ComboBoxItem IsSelected ="True" >Ekonomska</ComboBoxItem>
+                <ComboBoxItem>Biznis</ComboBoxItem>
+            </ComboBox>
+
+        </Grid>
+
+        <Grid Grid.Row="11" Background="LightGray"/>
+
+        <Grid Grid.Row="12" Background="LightGray">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Cijena karte: " HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" />
+            <TextBox Text="{Binding CijenaKarte,Mode=TwoWay}" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  />
+
+        </Grid>
+
+        <Grid Grid.Row="14">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.2*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1.2*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Command="{Binding UnesiLet}" Content="Unesi let" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+
+
+        </Grid>
+        
+    </Grid>
+</Page>

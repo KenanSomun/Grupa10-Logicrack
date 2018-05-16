@@ -20,12 +20,13 @@ namespace GoFly.View
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class UredjivanjeProfila : Page
+    public sealed partial class KontrolaKorisnika : Page
     {
-        public UredjivanjeProfila()
+        public KontrolaKorisnika()
         {
-            //this.InitializeComponent();
-            this.DataContext = new ViewModel.UredjivanjeProfilaViewModel();
+            this.InitializeComponent();
+            this.DataContext = new ViewModel.KontrolaKorisnikaViewModel();
+
         }
     }
 }
