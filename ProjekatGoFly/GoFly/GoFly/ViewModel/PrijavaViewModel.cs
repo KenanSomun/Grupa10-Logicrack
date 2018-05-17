@@ -81,6 +81,7 @@ namespace GoFly.ViewModel
                     return;
                 }
 
+               
                 if (db.Administratori.Count() == 0) {
                     Administrator temp = new Administrator();
                     temp.AdministratorId = 1;
@@ -93,6 +94,7 @@ namespace GoFly.ViewModel
                     temp.Sifra = "admin1";
 
                     db.Administratori.Add(temp);
+                    db.SaveChanges(); // OVO FALI NA GIT
                 }
                 
                 foreach (Administrator Admin in db.Administratori) {
