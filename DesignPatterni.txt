@@ -1,0 +1,76 @@
+﻿							Projektni zadatak 8: Design patterni
+
+	1. Proxy pattern
+
+				- Kada se koristi:
+		
+		Namjena Proxy paterna je da omogući pristup i kontrolu pristupa stvarnim objektima. 
+		Proxy patern rješava probleme kada se objekt ne može instancirati direktno (npr. zbog restrikcije pristupa).  
+		
+		Proxy patern se pored kontrole pristupa koristi kada postoje objekti koji su skupi za kreirati, potreban
+		je lokalni objekat koji referira na remote objekat. Često se koristi i za klase koje imaju osjetljive
+		podatke ili spore operacije.
+
+				- Kako se koristi:
+
+		Tako sto se kreira objekat posrednik, koji sluzi za prihvatanje i eventualno odgovaranje na zahtjeve 
+		o pristupu stvarnom objektu.
+
+				- Iskoristenost u projektu:
+
+		Nije koristen u projektu, ali mozemo proxy design pattern koristiti pri prijavi na nasu aplikaciju. 
+		Mogli bi da kreiramo objekat koji ce primati zahtjeve za pristup aplikaciji, zajedno sa podacima o mailu i sifri korisnika, a zatim
+		u zavisnosti od proslijedenih podataka otvaramo neku formu aplikacije, ili javljamo gresku.
+
+
+	2. Adapter pattern
+
+				- Kada se koristi:
+
+		Osnovna namjena Adapter paterna je da omogući širu upotrebu već postojećih klasa. U situacijama
+		kada je potreban drugačiji interfejs već postojeće klase, a ne želimo mijenjati postojeću klasu koristi
+		se Adapter patern. 
+
+		U slučaju da originalna klasa sadrži samo mali dio funkcionalnosti onda je bolji pristup kreirati novu klasu i zaobići
+		korištenje Adapter paterna. Adapter patern ustvari mapira interfejs jedne klase u drugu tako da mogu raditi zajedno. 
+
+			 	- Kako se koristi:
+		
+		Adapter patern kreira novu adapter klasu koja služi kao posrednik između
+		originalne klase i željenog interfejsa.
+
+		Adapter patern sadrži sljedeće klase: 
+
+			- Client – klasa koja sarađuje sa drugim klasama preko ITarget interfejsa 
+			- ITarget – definira domen specifični interfejs koji klijent koristi/zahtjeva (zahtijevani interfejs) 
+			- Adapter – implementira novi zahtijevani interfejs tj. prilagođava „stari-postojeći“ interfejs 
+			- Adaptee – definira postojeći interfejs koji treba prilagoditi/adaptirati. 
+
+				- Iskoristenost u nasem projektu:
+
+		Nije koristen u projektu. Kako nase klase ne sadrze veliki broj funkcionalnosti, preporucljivo je da se ne koristi adapter patern.
+
+
+	3. Decorator pattern
+
+				- Kada se koristi:
+
+	Osnovna namjena Decorator paterna je da omogući dinamičko dodavanje novih elemenata i ponašanja
+	(funkcionalnosti) postojećim objektima. Objekat pri tome ne zna da je urađena dekoracija što je veoma
+	korisno za iskoristljivost i ponovnu upotrebu komponenti softverskog sistema. Može se naprimjer koristi i za implementaciju
+	različitih kompresija videa, simultano prevođenje. 
+
+				- Kako se koristi:
+
+	Decorator patern čine sljedeće klase: 
+		- Component – Originalna klasa (klase) koja sadrži interfejs koji se može mijenjati ili mu se mogu dinamički dodati operacije 
+		- IComponent – interfejs koji identificira klase objekata koji trebaju biti dekorisani (Component je jedna od njih) 
+		- Decorator – klasa koja odgovara IComponent interfejsu i implementira dinamički prošireni interfejs. 
+
+				- Iskoristenost u nasem projektu:
+
+	Nije koristen u projektu. U nasem projektu mozemo koristiti ovaj patern prilikom dodavanja novih ili brisanja starih letova, 
+	gdje se lista svih letova dinamicki prikazuje. Takoder mozemo koristiti ovaj patern prilikom rezervacije ili ponistenja 
+	rezervacije karata, gdje treba da dinamicki prikazujemo broj slobodnih mjesta u odredenom letu.
+
+
