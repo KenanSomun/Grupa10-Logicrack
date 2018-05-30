@@ -78,7 +78,8 @@
 4. Iterator pattern
 
 - Kada se koristi:
-Ovaj pattern se koristi u situacijama kada želimo omogućiti pristup elementima kolekcije sekvencijalno bez poznavanja interne strukture 	kolekcije.
+Ovaj pattern se koristi u situacijama kada želimo omogućiti pristup elementima kolekcije sekvencijalno bez poznavanja 
+interne strukture kolekcije.
 
 - Kako se koristi:
 Implementacija ovog patterna podrazumjeva sljedeće:
@@ -87,33 +88,43 @@ Implementacija ovog patterna podrazumjeva sljedeće:
 	Collection - tip podataka koji sadrži sposobnost generiranja kolekcije vrijednosti
 	GetEnumerator - metoda koja pruža vrijednosti kolekcije u sekvencijalno
 	OtherOps - druge metode koje pružaju vrijednosti kolekcije u nekom drugom redoslijedu ili obliku
-U C#-u se koristi intefejs IEnumerator i njegova metoda GetEnumerator iz System.Collections, a ova metoda se automatski uključuje u okviru foreach iskaza.
+U C#-u se koristi intefejs IEnumerator i njegova metoda GetEnumerator iz System.Collections, a ova metoda se automatski uključuje u okviru 
+foreach iskaza.
 
 - Iskorištenost u našem projektu:
-Pattern nije korišten u našem projektu do sada (dio sa implementacijom UWP dijela aplikacije za administrativni dio), a osnovni razlog je nepoznavanje patterna do trenutka implementacije. Pogodno mjesto za implementaciju ovog patterna bi svakako bila npr. klasa PonudaLetova u kojoj čuvamo listu letova. U ovoj klasi bi definitivno trebalo iskoristiti ovaj pattern i tako omogućiti pristup svakom letu pojedinačno bez da otkrivamo internu strukturu naše klase Let.
+Pattern nije korišten u našem projektu do sada (dio sa implementacijom UWP dijela aplikacije za administrativni dio), a osnovni razlog je 
+nepoznavanje patterna do trenutka implementacije. Pogodno mjesto za implementaciju ovog patterna bi svakako bila npr. klasa PonudaLetova u 
+kojoj čuvamo listu letova. U ovoj klasi bi definitivno trebalo iskoristiti ovaj pattern i tako omogućiti pristup svakom letu pojedinačno 
+bez da otkrivamo internu strukturu naše klase Let.
 
 
 5. Strategy pattern
 
 - Kada se koristi:
-Strategy pattern se koristi kada želimo izdvojiti algoritam iz matične klase i uključiti ga u posebne klase. Pogodan je kada postoje različiti primjenjivi algoritmi (strategije) za neki problem.
+Strategy pattern se koristi kada želimo izdvojiti algoritam iz matične klase i uključiti ga u posebne klase. Pogodan je kada postoje 
+različiti primjenjivi algoritmi (strategije) za neki problem.
 
 - Kako se koristi:
 Implementacija ovog patterna podrazumjeva sljedeće:
 	Context - Klasa preko koje Client klasa daje kontekstualne informacije za IStrategy algoritme.
 	IStrategy - definira zajednički interfejs za sve lagoritme (strategije).
 	StrategyA, StrategyB .. - Klase koje implementiraju algoritme (konkretne strategije) tj. IStrategy interfejs.
-U Context klasi bi obično imali neki switch iskaz ili kaskadni if iskaz za odlučivanje o izboru strategije, a ovo je moguće realizovati i preko delegata ukoliko su strategije jednostavne metode. 
+U Context klasi bi obično imali neki switch iskaz ili kaskadni if iskaz za odlučivanje o izboru strategije, a ovo je moguće realizovati i 
+preko delegata ukoliko su strategije jednostavne metode. 
 Prednost ovog patterna je što se mogu definirati dodatne metode za nove strategije neovisno od ostalih klasa!
 
 - Iskorištenost u našem projektu:
-Ni ovaj pattern nije korišten ali za njega također postoji dobro mjesto za implementaciju i korištenje. Naime u folderu Helper gdje smo sadržavali nekoliko pomoćnih klasa, imali smo i klasu Validation. U njoj kreiramo MD5 hash za šifre pomoću funkcije CreateMD5. Ukoliko bismo iskoristili Strategy pattern u našem projektu, mogli bismo podržati puno više načina za hash-iranje šifri kao i dati podršku promjeni hash funkcije ukoliko bi za to bilo potrebe u budućnosti. 
+Ni ovaj pattern nije korišten ali za njega također postoji dobro mjesto za implementaciju i korištenje. 
+Naime u folderu Helper gdje smo sadržavali nekoliko pomoćnih klasa, imali smo i klasu Validation. 
+U njoj kreiramo MD5 hash za šifre pomoću funkcije CreateMD5. Ukoliko bismo iskoristili Strategy pattern u našem projektu, mogli bismo
+ podržati puno više načina za hash-iranje šifri kao i dati podršku promjeni hash funkcije ukoliko bi za to bilo potrebe u budućnosti. 
 
 
 6. Observer pattern
 
 - Kada se koristi:
-Ovaj pattern se koristi za uspostavljanje relacije između objekata takve da kada se stanje jednog objekta promijeni svi vezani objekti dobiju obavijest. 
+Ovaj pattern se koristi za uspostavljanje relacije između objekata takve da kada se stanje jednog objekta promijeni svi vezani 
+objekti dobiju obavijest. 
 
 - Kako se koristi:
 Struktura ovog patterna se sastoji od:
@@ -122,10 +133,13 @@ Struktura ovog patterna se sastoji od:
 	Observer - obezbjeđuje konkretnu implementaciju za interfejs
 	Update - metoda koja formira interfejs između klasa Subject i Observer
 	Notify - Event mehanizam za pozivanje update operacije
-Implementacija bi se ogledala u privatnom događaju (private event) Notify u Subject klasi, gdje bi poslije promjene njegovog stanja on aktivirao događaj (event) i slao svoje stanje kao parametar Update metodi unutar Observer klase (za što je prethodno neophodno da metoda bude registrovana na Subject klasu). Moguće je više različitih posmatrača sa svojim Update metodama.
+Implementacija bi se ogledala u privatnom događaju (private event) Notify u Subject klasi, gdje bi poslije promjene njegovog stanja on 
+aktivirao događaj (event) i slao svoje stanje kao parametar Update metodi unutar Observer klase (za što je prethodno neophodno da metoda 
+bude registrovana na Subject klasu). Moguće je više različitih posmatrača sa svojim Update metodama.
 
 - Iskorištenost u našem projektu:
-Ni ovaj pattern nije iskorišten u našem patternu a moguća implementacija i upotreba ovog patterna bi se ogledala kroz sistem za notifikaciju korisnika o dostupnim akcijama/popustima za karte određenih letova, odgođene letove i sl. 
+Ni ovaj pattern nije iskorišten u našem patternu a moguća implementacija i upotreba ovog patterna bi se ogledala kroz sistem za 
+notifikacije/obavještavanje korisnika o dostupnim akcijama/popustima za karte određenih letova, odgođene letove i sl. 
 
 
 
