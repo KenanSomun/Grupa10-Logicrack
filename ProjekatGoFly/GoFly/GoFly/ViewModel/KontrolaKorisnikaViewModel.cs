@@ -265,7 +265,7 @@ namespace GoFly.ViewModel
                         db.SaveChanges();
 
 
-                        MessageDialog msg = new MessageDialog("Uspjesno ste obrisali korisnika", "Greska");
+                        MessageDialog msg = new MessageDialog("Uspješno ste obrisali korisnika", "Čestitamo!");
                         await msg.ShowAsync();
                         return;
                     }

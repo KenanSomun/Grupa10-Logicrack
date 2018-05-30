@@ -164,9 +164,12 @@ namespace GoFly.ViewModel
                     noviKorisnik.MojeRezervacije = new List<Rezervacija>();
 
                     db.Korisnici.Add(noviKorisnik);
-
                     db.SaveChanges();
-                }
+
+                MessageDialog msg = new MessageDialog("Uspještno ste se registrovali!", "Čestitamo!");
+                await msg.ShowAsync();
+
+            }
 
             NavigationService.Navigate(typeof(View.Prijava), null); 
 
